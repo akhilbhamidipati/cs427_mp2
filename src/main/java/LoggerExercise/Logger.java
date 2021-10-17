@@ -21,7 +21,7 @@ public class Logger {
      *
      */
     //@TODO Add constructor here
-    private Logger() {
+    private Logger() throws IOException {
         String today = (new SimpleDateFormat("MMddyyyy")).format(new Date());
         logFileName = "log"+today+".log";
         logFile = new File(logFileName);
@@ -50,7 +50,7 @@ public class Logger {
      *            The Object that will be logged in the file.
      */
     public void logInFile(Object log) throws IOException {
-        //@TODO: implement me
+        //@TODO: implement me 
         FileWriter myWriter = new FileWriter(logFileName, true);
         BufferedWriter bw = new BufferedWriter(myWriter);
     	bw.write(log.toString() + System.lineSeparator());
