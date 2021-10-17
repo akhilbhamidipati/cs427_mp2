@@ -36,7 +36,7 @@ public class Logger {
             return instance;
         } else {
             instance = new Logger();
-            return instance
+            return instance;
         }
     }
 
