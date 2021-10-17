@@ -49,7 +49,7 @@ public class Logger {
     public void logInFile(Object log) {
         //@TODO: implement me
         FileWriter myWriter = new FileWriter(logFileName);
-        myWriter.write(log);
+        myWriter.write(log.toString());
         myWriter.close();
     }
 }
