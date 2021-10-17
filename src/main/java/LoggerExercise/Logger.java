@@ -33,7 +33,7 @@ public class Logger {
     /**
      * @return A Logger instance of this class.
      */
-    public static Logger getInstance() {
+    public static Logger getInstance() throws IOException {
         if (instance != null) {
             // can only have one instance
             return instance;
