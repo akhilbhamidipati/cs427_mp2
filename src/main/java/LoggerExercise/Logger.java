@@ -25,7 +25,7 @@ public class Logger {
         String today = (new SimpleDateFormat("MMddyyyy")).format(new Date());
         logFileName = "log"+today+".log";
         logFile = new File(logFileName);
-        if (logFileName.exists()) {
+        if (logFile.exists()) {
             new FileWriter(logFileName, false).close();
         }
     }
