@@ -21,17 +21,17 @@ public class LoggerTest {
         assertEquals(0,constructors.length);
     }
 
-    @Test
-    public void createInstanceTest() throws NoSuchFieldException,IllegalAccessException{
+    // @Test
+    // public void createInstanceTest() throws NoSuchFieldException,IllegalAccessException{
 
-        Field field = Logger.class.getDeclaredField("instance");
-        field.setAccessible(true);
-        Logger log = (Logger)field.get(null);
-        assertNull(log);
-        Logger logger = Logger.getInstance();
-        assertNotNull(logger);
+    //     Field field = Logger.class.getDeclaredField("instance");
+    //     field.setAccessible(true);
+    //     Logger log = (Logger)field.get(null);
+    //     assertNull(log);
+    //     Logger logger = Logger.getInstance();
+    //     assertNotNull(logger);
 
-    }
+    // }
 
     @Test
     public void writeTest() throws IOException{
