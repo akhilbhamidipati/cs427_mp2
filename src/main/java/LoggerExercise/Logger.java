@@ -13,18 +13,31 @@ public class Logger {
     /**
      * @TODO Add any necessary fields and variables.
      */
-
+    private static File logFile;
+    private static String logFileName;
+    
     /**
      * The constructor for SingletonLogger. Set all necessary fields.
      *
      */
     //@TODO Add constructor here
+    private Logger() {
+        String today = (new SimpleDateFormat("MMddyyyy")).format(new Date());
+        logFileName = "log"+today+".log";
+        logFile = new File(logFileName);
+    }
 
     /**
      * @return A Logger instance of this class.
      */
     public static Logger getInstance() {
-        return null; //@TODO: Delete this line
+        if (instance != null) {
+            // can only have one instance
+            return instance;
+        } else {
+            instance = new Logger();
+            return instance
+        }
     }
 
 
@@ -35,5 +48,8 @@ public class Logger {
      */
     public void logInFile(Object log) {
         //@TODO: implement me
+        FileWriter myWriter = new FileWriter(logFileName);
+        myWriter.write(log);
+        myWriter.close();
     }
 }
