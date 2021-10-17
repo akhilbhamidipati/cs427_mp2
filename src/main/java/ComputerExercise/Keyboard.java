@@ -9,11 +9,11 @@ public class Keyboard extends ComputerPeripheral{
 
     @Override
     public String run() {
-        return "Hello world!\n";
+        return super.run();
     }
 
     @Override
     public String getDescription() {
-        return "A simple computer with keyboard";
+        return super.getDescription() + " with keyboard";
     }
 }

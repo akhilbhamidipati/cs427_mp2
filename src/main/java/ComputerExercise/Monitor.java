@@ -7,11 +7,11 @@ public class Monitor extends ComputerPeripheral{
 //@TODO: Implememnt me
     @Override
     public String run() {
-        return "Monitor turned on\nHello world!\nDisplay colorful interface\n";
+        return "Monitor turned on\n" + super.run() + "Display colorful interface\n";
     }
 
     @Override
     public String getDescription() {
-        return "A simple computer with monitor";
+        return super.getDescription() + " with monitor";
     }
 }
