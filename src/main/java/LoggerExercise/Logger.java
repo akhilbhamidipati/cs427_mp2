@@ -50,7 +50,7 @@ public class Logger {
         //@TODO: implement me
         FileWriter myWriter = new FileWriter(logFileName, true);
         BufferedWriter bw = new BufferedWriter(myWriter);
-    	bw.write(log.toString());
+    	bw.write(log.toString() + System.lineSeparator());
     	//Closing BufferedWriter Stream
     	bw.close();
         // myWriter.write(log.toString() + System.lineSeparator());
