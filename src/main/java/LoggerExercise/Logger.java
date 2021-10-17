@@ -48,8 +48,8 @@ public class Logger {
      */
     public void logInFile(Object log) throws IOException {
         //@TODO: implement me
-        FileWriter myWriter = new FileWriter(logFileName);
-        myWriter.write(log.toString(), true);
+        FileWriter myWriter = new FileWriter(logFileName, true);
+        myWriter.write(log.toString();
         myWriter.close();
     }
 }
