@@ -8,19 +8,19 @@ public class AnimalFactory {
         //@TODO: implement me
         int age = Integer.parseInt((new SimpleDateFormat("dd")).format(new Date()));
         if (type == AnimalType.Cat) {
-            Animal a = new Cat("Salmon");
+            Cat a = new Cat("Salmon");
             a.setAge(age);
             return a;
         } else if (type == AnimalType.Dog) {
-            Animal a = new Dog("Bone");
+            Dog a = new Dog("Bone");
             a.setAge(age);
             return a;
         } else if (type == AnimalType.Duck) {
-            Animal a = new Duck("Rice");
+            Duck a = new Duck("Rice");
             a.setAge(age);
             return a;
         } else if (type == AnimalType.Cow) {
-            Animal a = new Cow("Grass");
+            Cow a = new Cow("Grass");
             a.setAge(age);
             return a;
         }
