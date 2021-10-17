@@ -46,7 +46,7 @@ public class Logger {
      * @param log
      *            The Object that will be logged in the file.
      */
-    public void logInFile(Object log) {
+    public void logInFile(Object log) throws IOException {
         //@TODO: implement me
         FileWriter myWriter = new FileWriter(logFileName);
         myWriter.write(log.toString());
